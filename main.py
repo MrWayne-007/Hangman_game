@@ -13,6 +13,8 @@ for letter in chosen_word:
         print("right")
     else:
         print("wrong")
+
+# Work in progress
         
 
 
