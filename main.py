@@ -53,6 +53,8 @@ stages = ['''
 
 word_list=["camel","elephant","dog"]
 
+lives = 6
+
 chosen_word=random.choice(word_list)
 print(chosen_word)
 
@@ -82,9 +84,17 @@ while not game_over:
             display += "_"
     print(display)
 
+    if guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            game_over = True
+            print("game over , you loose")
+
     if "_" not in display:
         game_over=True
         print("you won")
+    
+    print(stages[lives])
 
 
 # Work in progress
